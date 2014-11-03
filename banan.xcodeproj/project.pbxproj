@@ -17,6 +17,8 @@
 		BF5ABB9C1A0837F300DA8725 /* SlideMenuNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5ABB9B1A0837F300DA8725 /* SlideMenuNavigationController.m */; };
 		BF5ABBA01A08384100DA8725 /* ToursViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5ABB9F1A08384100DA8725 /* ToursViewController.m */; };
 		BF5ABBA31A08386C00DA8725 /* ToursNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5ABBA21A08386C00DA8725 /* ToursNavigationController.m */; };
+		BF9084871A08455400BF0748 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9084861A08455400BF0748 /* MMExampleDrawerVisualStateManager.m */; };
+		BF90848E1A0846EE00BF0748 /* SlideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF90848D1A0846EE00BF0748 /* SlideMenuTableViewCell.m */; };
 		BFD379AC1A08345F00DAEECD /* WebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD379AB1A08345F00DAEECD /* WebAPI.m */; };
 		FC6564CB211592A5742A1FB8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE206E49E345362FC26521F1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +54,10 @@
 		BF5ABB9F1A08384100DA8725 /* ToursViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToursViewController.m; sourceTree = "<group>"; };
 		BF5ABBA11A08386C00DA8725 /* ToursNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToursNavigationController.h; sourceTree = "<group>"; };
 		BF5ABBA21A08386C00DA8725 /* ToursNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToursNavigationController.m; sourceTree = "<group>"; };
+		BF9084851A08455400BF0748 /* MMExampleDrawerVisualStateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMExampleDrawerVisualStateManager.h; sourceTree = "<group>"; };
+		BF9084861A08455400BF0748 /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
+		BF90848C1A0846EE00BF0748 /* SlideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuTableViewCell.h; sourceTree = "<group>"; };
+		BF90848D1A0846EE00BF0748 /* SlideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuTableViewCell.m; sourceTree = "<group>"; };
 		BFD379AA1A08345F00DAEECD /* WebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAPI.h; sourceTree = "<group>"; };
 		BFD379AB1A08345F00DAEECD /* WebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAPI.m; sourceTree = "<group>"; };
 		C78FFE8EC41E33EEBF1CA433 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +115,7 @@
 		BF1EFE291A082CB20078CBD7 /* banan */ = {
 			isa = PBXGroup;
 			children = (
-				BF9084811A0843AD00BF0748 /* test */,
+				BF9084811A0843AD00BF0748 /* MMExampleManager */,
 				BF5ABB9D1A08381600DA8725 /* Tours */,
 				BF5ABB961A08378000DA8725 /* Slide Menu */,
 				BFD379A91A08343B00DAEECD /* Api */,
@@ -152,6 +158,7 @@
 		BF5ABB961A08378000DA8725 /* Slide Menu */ = {
 			isa = PBXGroup;
 			children = (
+				BF9084881A08467900BF0748 /* cells */,
 				BF5ABB971A0837AC00DA8725 /* SlideMenuViewController.h */,
 				BF5ABB981A0837AC00DA8725 /* SlideMenuViewController.m */,
 				BF5ABB9A1A0837F300DA8725 /* SlideMenuNavigationController.h */,
@@ -171,11 +178,22 @@
 			name = Tours;
 			sourceTree = "<group>";
 		};
-		BF9084811A0843AD00BF0748 /* test */ = {
+		BF9084811A0843AD00BF0748 /* MMExampleManager */ = {
 			isa = PBXGroup;
 			children = (
+				BF9084851A08455400BF0748 /* MMExampleDrawerVisualStateManager.h */,
+				BF9084861A08455400BF0748 /* MMExampleDrawerVisualStateManager.m */,
 			);
-			name = test;
+			name = MMExampleManager;
+			sourceTree = "<group>";
+		};
+		BF9084881A08467900BF0748 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				BF90848C1A0846EE00BF0748 /* SlideMenuTableViewCell.h */,
+				BF90848D1A0846EE00BF0748 /* SlideMenuTableViewCell.m */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 		BFD379A91A08343B00DAEECD /* Api */ = {
@@ -331,8 +349,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD379AC1A08345F00DAEECD /* WebAPI.m in Sources */,
+				BF9084871A08455400BF0748 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				BF5ABB9C1A0837F300DA8725 /* SlideMenuNavigationController.m in Sources */,
 				BF5ABB991A0837AC00DA8725 /* SlideMenuViewController.m in Sources */,
+				BF90848E1A0846EE00BF0748 /* SlideMenuTableViewCell.m in Sources */,
 				BF1EFE301A082CB20078CBD7 /* AppDelegate.m in Sources */,
 				BF5ABBA01A08384100DA8725 /* ToursViewController.m in Sources */,
 				BF1EFE2D1A082CB20078CBD7 /* main.m in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1SW-my-7YK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Slide Menu View Controller-->
         <scene sceneID="EmL-9D-X3P">
             <objects>
-                <viewController id="yPa-bH-EjS" customClass="SlideMenuViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SideMenuVC" id="yPa-bH-EjS" customClass="SlideMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TC6-Wd-bpy"/>
                         <viewControllerLayoutGuide type="bottom" id="Mcq-k7-LA5"/>
@@ -15,6 +15,21 @@
                     <view key="view" contentMode="scaleToFill" id="YTn-qH-3vC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="QsB-6M-C9I">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="biu-Vq-vpX" customClass="SlideMenuTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="biu-Vq-vpX" id="6TP-94-oSY">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="NXp-ZU-ycS"/>
@@ -23,10 +38,10 @@
             </objects>
             <point key="canvasLocation" x="1583" y="228"/>
         </scene>
-        <!--View Controller-->
+        <!--Tours View Controller-->
         <scene sceneID="wPF-rO-gKe">
             <objects>
-                <viewController id="qwA-nh-WfK" sceneMemberID="viewController">
+                <viewController id="qwA-nh-WfK" customClass="ToursViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6LB-3a-vLt"/>
                         <viewControllerLayoutGuide type="bottom" id="8QX-bc-agO"/>
@@ -36,10 +51,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="FqE-GM-mOr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OBD-E1-JMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="1084"/>
+            <point key="canvasLocation" x="2395" y="1084"/>
         </scene>
         <!--Slide Menu Navigation Controller-->
         <scene sceneID="tZ7-cs-oID">
@@ -58,6 +74,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsE-rL-Aps" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="771" y="228"/>
+        </scene>
+        <!--Tours Navigation Controller-->
+        <scene sceneID="0ha-jV-V8k">
+            <objects>
+                <navigationController storyboardIdentifier="MainNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="1SW-my-7YK" customClass="ToursNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JLY-Qz-8UD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qwA-nh-WfK" kind="relationship" relationship="rootViewController" id="Lfv-6L-2bV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Rc-El-c42" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1583" y="1084"/>
         </scene>
     </scenes>
 </document>

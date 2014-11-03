@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "MMExampleDrawerVisualStateManager.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,44 @@
 
 @implementation AppDelegate
 
+- (MMDrawerController *)createSideMenuController
+{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    UIViewController *sideMenuViewController = (UIViewController *)[storyboard instantiateViewControllerWithIdentifier:@"SideMenuVC"];
+    UINavigationController *firstNavigationController = [storyboard instantiateViewControllerWithIdentifier:@"MainNavigationVC"];
+    
+    [sideMenuViewController setRestorationIdentifier:@"MMExampleLeftNavigationControllerRestorationKey"];
+    
+    MMDrawerController *drawerController = [[MMDrawerController alloc] initWithCenterViewController:firstNavigationController leftDrawerViewController:sideMenuViewController];
+    
+    [drawerController setRestorationIdentifier:@"MMDrawer"];
+    [drawerController setMaximumLeftDrawerWidth:214.0];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModePanningCenterView];
+    [drawerController setShowsShadow:NO];
+    
+    [drawerController
+     setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+         MMDrawerControllerDrawerVisualStateBlock block;
+         block = [[MMExampleDrawerVisualStateManager sharedManager]
+                  drawerVisualStateBlockForDrawerSide:drawerSide];
+         if(block){
+             block(drawerController, drawerSide, percentVisible);
+         }
+     }];
+    
+    return drawerController;
+}
+
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    [self.window setRootViewController:[self createSideMenuController]];
     return YES;
 }
 
