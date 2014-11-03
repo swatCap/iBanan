@@ -1,0 +1,41 @@
+PODS:
+  - AFNetworking (2.4.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.4.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.4.1)
+  - AFNetworking/Security (2.4.1)
+  - AFNetworking/Serialization (2.4.1)
+  - AFNetworking/UIKit (2.4.1):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - MMDrawerController (0.0.2):
+    - MMDrawerController/Core
+    - MMDrawerController/MMDrawerBarButtonItem
+    - MMDrawerController/MMDrawerVisualStates
+  - MMDrawerController/Core (0.0.2)
+  - MMDrawerController/MMDrawerBarButtonItem (0.0.2):
+    - MMDrawerController/Core
+  - MMDrawerController/MMDrawerVisualStates (0.0.2):
+    - MMDrawerController/Core
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.0)
+  - MMDrawerController (~> 0.0.2)
+
+SPEC CHECKSUMS:
+  AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  MMDrawerController: 8cd0f4a5500c81df3bc3773d385265fe55b6ce3b
+
+COCOAPODS: 0.34.4
