@@ -109,6 +109,7 @@
 		BF1EFE291A082CB20078CBD7 /* banan */ = {
 			isa = PBXGroup;
 			children = (
+				BF9084811A0843AD00BF0748 /* test */,
 				BF5ABB9D1A08381600DA8725 /* Tours */,
 				BF5ABB961A08378000DA8725 /* Slide Menu */,
 				BFD379A91A08343B00DAEECD /* Api */,
@@ -168,6 +169,13 @@
 				BF5ABBA21A08386C00DA8725 /* ToursNavigationController.m */,
 			);
 			name = Tours;
+			sourceTree = "<group>";
+		};
+		BF9084811A0843AD00BF0748 /* test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = test;
 			sourceTree = "<group>";
 		};
 		BFD379A91A08343B00DAEECD /* Api */ = {
