@@ -10,4 +10,10 @@
 
 @interface SlideMenuViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSIndexPath *currentSelectedCellIndexPath;
+
+- (void)selectTableViewCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath ofTableView:(UITableView *)tableView;
+- (void)deselectTableViewCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath ofTableView:(UITableView *)tableView;
+
 @end

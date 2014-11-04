@@ -19,6 +19,9 @@
 		BF5ABBA31A08386C00DA8725 /* ToursNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF5ABBA21A08386C00DA8725 /* ToursNavigationController.m */; };
 		BF9084871A08455400BF0748 /* MMExampleDrawerVisualStateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9084861A08455400BF0748 /* MMExampleDrawerVisualStateManager.m */; };
 		BF90848E1A0846EE00BF0748 /* SlideMenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF90848D1A0846EE00BF0748 /* SlideMenuTableViewCell.m */; };
+		BF9084921A08488000BF0748 /* ToursTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9084911A08488000BF0748 /* ToursTableViewCell.m */; };
+		BF9084951A08494B00BF0748 /* SearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9084941A08494B00BF0748 /* SearchBarView.xib */; };
+		BF9084981A084E7900BF0748 /* AASideMenuSeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9084971A084E7900BF0748 /* AASideMenuSeparatorView.m */; };
 		BFD379AC1A08345F00DAEECD /* WebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD379AB1A08345F00DAEECD /* WebAPI.m */; };
 		FC6564CB211592A5742A1FB8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE206E49E345362FC26521F1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,11 @@
 		BF9084861A08455400BF0748 /* MMExampleDrawerVisualStateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMExampleDrawerVisualStateManager.m; sourceTree = "<group>"; };
 		BF90848C1A0846EE00BF0748 /* SlideMenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideMenuTableViewCell.h; sourceTree = "<group>"; };
 		BF90848D1A0846EE00BF0748 /* SlideMenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideMenuTableViewCell.m; sourceTree = "<group>"; };
+		BF9084901A08488000BF0748 /* ToursTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToursTableViewCell.h; sourceTree = "<group>"; };
+		BF9084911A08488000BF0748 /* ToursTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToursTableViewCell.m; sourceTree = "<group>"; };
+		BF9084941A08494B00BF0748 /* SearchBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarView.xib; sourceTree = "<group>"; };
+		BF9084961A084E7900BF0748 /* AASideMenuSeparatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASideMenuSeparatorView.h; sourceTree = "<group>"; };
+		BF9084971A084E7900BF0748 /* AASideMenuSeparatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASideMenuSeparatorView.m; sourceTree = "<group>"; };
 		BFD379AA1A08345F00DAEECD /* WebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAPI.h; sourceTree = "<group>"; };
 		BFD379AB1A08345F00DAEECD /* WebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAPI.m; sourceTree = "<group>"; };
 		C78FFE8EC41E33EEBF1CA433 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +123,7 @@
 		BF1EFE291A082CB20078CBD7 /* banan */ = {
 			isa = PBXGroup;
 			children = (
-				BF9084811A0843AD00BF0748 /* MMExampleManager */,
+				BF9084811A0843AD00BF0748 /* Help Files */,
 				BF5ABB9D1A08381600DA8725 /* Tours */,
 				BF5ABB961A08378000DA8725 /* Slide Menu */,
 				BFD379A91A08343B00DAEECD /* Api */,
@@ -158,6 +166,7 @@
 		BF5ABB961A08378000DA8725 /* Slide Menu */ = {
 			isa = PBXGroup;
 			children = (
+				BF9084931A08492A00BF0748 /* Search Bar */,
 				BF9084881A08467900BF0748 /* cells */,
 				BF5ABB971A0837AC00DA8725 /* SlideMenuViewController.h */,
 				BF5ABB981A0837AC00DA8725 /* SlideMenuViewController.m */,
@@ -170,6 +179,7 @@
 		BF5ABB9D1A08381600DA8725 /* Tours */ = {
 			isa = PBXGroup;
 			children = (
+				BF90848F1A08486800BF0748 /* Cells */,
 				BF5ABB9E1A08384100DA8725 /* ToursViewController.h */,
 				BF5ABB9F1A08384100DA8725 /* ToursViewController.m */,
 				BF5ABBA11A08386C00DA8725 /* ToursNavigationController.h */,
@@ -178,13 +188,15 @@
 			name = Tours;
 			sourceTree = "<group>";
 		};
-		BF9084811A0843AD00BF0748 /* MMExampleManager */ = {
+		BF9084811A0843AD00BF0748 /* Help Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF9084961A084E7900BF0748 /* AASideMenuSeparatorView.h */,
+				BF9084971A084E7900BF0748 /* AASideMenuSeparatorView.m */,
 				BF9084851A08455400BF0748 /* MMExampleDrawerVisualStateManager.h */,
 				BF9084861A08455400BF0748 /* MMExampleDrawerVisualStateManager.m */,
 			);
-			name = MMExampleManager;
+			name = "Help Files";
 			sourceTree = "<group>";
 		};
 		BF9084881A08467900BF0748 /* cells */ = {
@@ -194,6 +206,23 @@
 				BF90848D1A0846EE00BF0748 /* SlideMenuTableViewCell.m */,
 			);
 			name = cells;
+			sourceTree = "<group>";
+		};
+		BF90848F1A08486800BF0748 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BF9084901A08488000BF0748 /* ToursTableViewCell.h */,
+				BF9084911A08488000BF0748 /* ToursTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		BF9084931A08492A00BF0748 /* Search Bar */ = {
+			isa = PBXGroup;
+			children = (
+				BF9084941A08494B00BF0748 /* SearchBarView.xib */,
+			);
+			name = "Search Bar";
 			sourceTree = "<group>";
 		};
 		BFD379A91A08343B00DAEECD /* Api */ = {
@@ -295,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF9084951A08494B00BF0748 /* SearchBarView.xib in Resources */,
 				BF1EFE361A082CB20078CBD7 /* Main.storyboard in Resources */,
 				BF1EFE3B1A082CB20078CBD7 /* LaunchScreen.xib in Resources */,
 				BF1EFE381A082CB20078CBD7 /* Images.xcassets in Resources */,
@@ -351,9 +381,11 @@
 				BFD379AC1A08345F00DAEECD /* WebAPI.m in Sources */,
 				BF9084871A08455400BF0748 /* MMExampleDrawerVisualStateManager.m in Sources */,
 				BF5ABB9C1A0837F300DA8725 /* SlideMenuNavigationController.m in Sources */,
+				BF9084921A08488000BF0748 /* ToursTableViewCell.m in Sources */,
 				BF5ABB991A0837AC00DA8725 /* SlideMenuViewController.m in Sources */,
 				BF90848E1A0846EE00BF0748 /* SlideMenuTableViewCell.m in Sources */,
 				BF1EFE301A082CB20078CBD7 /* AppDelegate.m in Sources */,
+				BF9084981A084E7900BF0748 /* AASideMenuSeparatorView.m in Sources */,
 				BF5ABBA01A08384100DA8725 /* ToursViewController.m in Sources */,
 				BF1EFE2D1A082CB20078CBD7 /* main.m in Sources */,
 				BF5ABBA31A08386C00DA8725 /* ToursNavigationController.m in Sources */,
