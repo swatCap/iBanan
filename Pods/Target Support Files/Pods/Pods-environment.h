@@ -48,6 +48,12 @@
 #define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 4
 #define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 1
 
+// JBChartView
+#define COCOAPODS_POD_AVAILABLE_JBChartView
+#define COCOAPODS_VERSION_MAJOR_JBChartView 2
+#define COCOAPODS_VERSION_MINOR_JBChartView 8
+#define COCOAPODS_VERSION_PATCH_JBChartView 10
+
 // MMDrawerController
 #define COCOAPODS_POD_AVAILABLE_MMDrawerController
 #define COCOAPODS_VERSION_MAJOR_MMDrawerController 0

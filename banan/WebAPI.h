@@ -12,4 +12,12 @@
 
 +(instancetype)sharedWebAPI;
 
+#pragma mark - GET HOTELS INFO
+
+-(void) getHotelsInformationWithPageNumber:(NSInteger) pageNumber
+                            recordsPerPage:(NSInteger) recordsPerPage
+                                    sortId:(NSInteger) sortId
+                               withSuccess:(void(^)(id response)) success
+                               withFailure:(void(^)(NSError *error)) failure;
+
 @end

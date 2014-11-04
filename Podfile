@@ -6,13 +6,6 @@ pod "AFNetworking", "~> 2.0"
 
 pod 'MMDrawerController', '~> 0.0.2'
 
-source 'https://github.com/CocoaPods/Specs.git'
-
-target 'banan' do
+pod 'JBChartView', '~> 2.8.9’
 
 end
-
-target 'bananTests' do
-
-end
-

@@ -119,7 +119,7 @@
     
     SlideMenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    
+    [cell setBackgroundColor:[UIColor grayColor]];
     
     
     return cell;

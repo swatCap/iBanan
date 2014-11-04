@@ -7,33 +7,90 @@
 //
 
 #import "ToursViewController.h"
+#import "ToursTableViewCell.h"
+#import "WebAPI.h"
 
-@interface ToursViewController ()
+@interface ToursViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+@property (strong, nonatomic) NSMutableArray *toursArray;
+@property (strong, nonatomic) NSMutableDictionary *currentTour;
+
+
+
+@property (nonatomic) NSInteger pageNumber;
+@property (nonatomic) NSInteger recordsPerPage;
 
 @end
 
 @implementation ToursViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self.tableView setDelegate:self];
+    [self.tableView setDataSource:self];
+    
+    self.pageNumber = 0;
+    self.recordsPerPage = 20;
+    
+    [self loadInformationAboutTours];
+    
+    self.toursArray = [[NSMutableArray alloc] init];
+    self.currentTour = [[NSMutableDictionary alloc] init];
     
     [self.navigationItem setTitle:@"Banan"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - LOAD INFO ABOUT TOURS
+-(void) loadInformationAboutTours
+{
+    [[WebAPI sharedWebAPI] getHotelsInformationWithPageNumber:self.pageNumber
+                                               recordsPerPage:self.recordsPerPage
+                                                       sortId:0
+                                                  withSuccess:^(id response) {
+                                                      [self.toursArray addObjectsFromArray:response];
+                                                      
+                                                      [self.tableView reloadData];
+                                                  } withFailure:^(NSError *error) {
+        
+                                                  }];
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - UITABLEVIEW METHODS
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.toursArray.count;
 }
-*/
+
+-(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellIdentifier = @"Tour Cell";
+    ToursTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
+    
+    self.currentTour = [self.toursArray objectAtIndex:indexPath.row];
+    
+    
+    
+    return cell;
+}
+
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 130;
+}
+
+
+
+
+
+
+
+
+
+
 
 @end

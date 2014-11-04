@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.4.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - JBChartView (2.8.10)
   - MMDrawerController (0.0.2):
     - MMDrawerController/Core
     - MMDrawerController/MMDrawerBarButtonItem
@@ -32,10 +33,12 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - JBChartView (~> 2.8.9)
   - MMDrawerController (~> 0.0.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 0aabc6fae66d6e5d039eeb21c315843c7aae51ab
+  JBChartView: 50b221ef68d0934f5aea417a369a5b02167848a9
   MMDrawerController: 8cd0f4a5500c81df3bc3773d385265fe55b6ce3b
 
 COCOAPODS: 0.34.4

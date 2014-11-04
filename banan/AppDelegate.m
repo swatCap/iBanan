@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MMExampleDrawerVisualStateManager.h"
+#import <AFNetworking/AFNetworkActivityIndicatorManager.h>
+#import <AFNetworking/AFNetworkReachabilityManager.h>
+#import "AFHTTPRequestOperationLogger.h"
 
 @interface AppDelegate ()
 
@@ -46,10 +49,23 @@
     return drawerController;
 }
 
+- (void)banan_setupAFNetworking
+{
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    [[AFHTTPRequestOperationLogger sharedLogger] startLogging];
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        
+        NSLog(@"Reachability: %@", AFStringFromNetworkReachabilityStatus(status));
+        
+    }];
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self banan_setupAFNetworking];
     
     self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     [self.window setRootViewController:[self createSideMenuController]];

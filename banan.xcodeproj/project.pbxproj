@@ -22,6 +22,7 @@
 		BF9084921A08488000BF0748 /* ToursTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9084911A08488000BF0748 /* ToursTableViewCell.m */; };
 		BF9084951A08494B00BF0748 /* SearchBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF9084941A08494B00BF0748 /* SearchBarView.xib */; };
 		BF9084981A084E7900BF0748 /* AASideMenuSeparatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9084971A084E7900BF0748 /* AASideMenuSeparatorView.m */; };
+		BF90849B1A08D8E200BF0748 /* AFHTTPRequestOperationLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = BF90849A1A08D8E200BF0748 /* AFHTTPRequestOperationLogger.m */; };
 		BFD379AC1A08345F00DAEECD /* WebAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD379AB1A08345F00DAEECD /* WebAPI.m */; };
 		FC6564CB211592A5742A1FB8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE206E49E345362FC26521F1 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,8 @@
 		BF9084941A08494B00BF0748 /* SearchBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchBarView.xib; sourceTree = "<group>"; };
 		BF9084961A084E7900BF0748 /* AASideMenuSeparatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AASideMenuSeparatorView.h; sourceTree = "<group>"; };
 		BF9084971A084E7900BF0748 /* AASideMenuSeparatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AASideMenuSeparatorView.m; sourceTree = "<group>"; };
+		BF9084991A08D8E200BF0748 /* AFHTTPRequestOperationLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationLogger.h; sourceTree = "<group>"; };
+		BF90849A1A08D8E200BF0748 /* AFHTTPRequestOperationLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationLogger.m; sourceTree = "<group>"; };
 		BFD379AA1A08345F00DAEECD /* WebAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebAPI.h; sourceTree = "<group>"; };
 		BFD379AB1A08345F00DAEECD /* WebAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebAPI.m; sourceTree = "<group>"; };
 		C78FFE8EC41E33EEBF1CA433 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 		BF9084811A0843AD00BF0748 /* Help Files */ = {
 			isa = PBXGroup;
 			children = (
+				BF9084991A08D8E200BF0748 /* AFHTTPRequestOperationLogger.h */,
+				BF90849A1A08D8E200BF0748 /* AFHTTPRequestOperationLogger.m */,
 				BF9084961A084E7900BF0748 /* AASideMenuSeparatorView.h */,
 				BF9084971A084E7900BF0748 /* AASideMenuSeparatorView.m */,
 				BF9084851A08455400BF0748 /* MMExampleDrawerVisualStateManager.h */,
@@ -380,6 +385,7 @@
 			files = (
 				BFD379AC1A08345F00DAEECD /* WebAPI.m in Sources */,
 				BF9084871A08455400BF0748 /* MMExampleDrawerVisualStateManager.m in Sources */,
+				BF90849B1A08D8E200BF0748 /* AFHTTPRequestOperationLogger.m in Sources */,
 				BF5ABB9C1A0837F300DA8725 /* SlideMenuNavigationController.m in Sources */,
 				BF9084921A08488000BF0748 /* ToursTableViewCell.m in Sources */,
 				BF5ABB991A0837AC00DA8725 /* SlideMenuViewController.m in Sources */,
