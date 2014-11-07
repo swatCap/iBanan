@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-JBChartView.xcscheme</key>
+		<key>Pods-MMDrawerController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-MMDrawerController.xcscheme</key>
+		<key>Pods-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,12 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-banan-JBChartView.xcscheme</key>
+		<key>Pods-banan-MMDrawerController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-banan-MMDrawerController.xcscheme</key>
+		<key>Pods-banan-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,12 +44,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-bananTests-JBChartView.xcscheme</key>
+		<key>Pods-bananTests-MMDrawerController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-bananTests-MMDrawerController.xcscheme</key>
+		<key>Pods-bananTests-SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -67,62 +67,62 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0877DF73317718ABB353D936</key>
+		<key>01315F0185B895A1D707E463</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64CCA3311606BD6D3683FF5A</key>
+		<key>4FB0BDACDA9076EFD78D4E6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68420C69185671598E9D123F</key>
+		<key>6C50403834D4B4803E3F049C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6E19FB9BDCC7FC1664445E7C</key>
+		<key>73C6FF938CCDCABEE52FD1E5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>705CFCCE35B63F2E44B345F0</key>
+		<key>8EA29FBB7FABD06E62CC36E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8156D9198F3DD8802E36CEA6</key>
+		<key>8EE6942CFC10D2E155F91734</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84957CAE2CD19BC21C923FAC</key>
+		<key>956C7624786E01041D3BDCFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A7B955D26D71DCA7DDAE006</key>
+		<key>97F55B159C46C41EA9BFF368</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A3F972DD7C3C4229D99C5B30</key>
+		<key>AA2731AC201EDAD8F7D729BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A861B31F373BDD68049739D3</key>
+		<key>DA838E65ABB2D2665F86930E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE15F9B81AE6EEB8575CBD7C</key>
+		<key>E415BC03FF0D61E75777FFE4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE819AAFB31F2F792AC722B4</key>
+		<key>FDEC3D08CF07B5C98E529217</key>
 		<dict>
 			<key>primary</key>
 			<true/>
